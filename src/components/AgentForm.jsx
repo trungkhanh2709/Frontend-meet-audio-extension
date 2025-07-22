@@ -12,6 +12,7 @@ const AgentForm = () => {
   const [chatHistory, setChatHistory] = useState([]);
   const [suggestedActions, setSuggestedActions] = useState([]);
   const messagesEndRef = useRef(null);
+const [showOptions, setShowOptions] = useState(false);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -82,8 +83,11 @@ const AgentForm = () => {
     sendChatMessage(suggestionText);
   };
 
+
+  
+
   return (
-    <div className="p-4 border border-gray-300 rounded-xl w-3/4 mx-auto bg-white shadow-md min-h-[100vh]">
+    <div className="p-4 border border-gray-300 rounded-xl w-3/4 mx-auto bg-white shadow-md min-h-[90vh]">
       <div className="container">
         <h1 className="py-4 text-center text-lg font-bold">
           🌐 AI Web Summary Agent (ReelsightAI test)
@@ -158,9 +162,14 @@ const AgentForm = () => {
 
         {/* Nhập chat */}
         {result && (
-          <div className="mt-6">
+          <div className="mt-6 relative ">
             <h2 className="font-semibold mb-2">💬 Chat với Agent</h2>
-            <div className="flex space-x-2">
+            <div className="flex space-x-2 items-center">
+<div className="relative">
+
+</div>
+
+
               <input
                 type="text"
                 className="border px-3 py-2 rounded w-full"

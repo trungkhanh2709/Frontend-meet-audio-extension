@@ -1,10 +1,15 @@
 import React from "react";
 import AgentForm from "./components/AgentForm";
+import SearchHistory from "./components/AgentWithHistory"; // bạn sẽ tạo file này
 
 function App() {
   return (
-    <div style={{ padding: 40 }}>
-      <AgentForm />
+    <div className="flex h-screen">
+      
+
+      {/* Form nhập Agent bên phải */}
+    
+        <AgentForm />
     </div>
   );
 }
