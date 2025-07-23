@@ -97,7 +97,7 @@ const [showOptions, setShowOptions] = useState(false);
           <input
             type="url"
             className="border px-3 py-2 rounded w-3/4"
-            placeholder="Nhập URL trang web"
+            placeholder="Enter website URL"
             required
             value={url}
             onChange={(e) => setUrl(e.target.value)}
@@ -107,7 +107,7 @@ const [showOptions, setShowOptions] = useState(false);
             className="border text-black hover:bg-black hover:text-white px-4 py-2 rounded"
             disabled={loading}
           >
-            {loading ? "Đang xử lý..." : "Chạy Agent"}
+            {loading ? "Processing..." : "Run Agent"}
           </button>
         </form>
 
@@ -163,7 +163,7 @@ const [showOptions, setShowOptions] = useState(false);
         {/* Nhập chat */}
         {result && (
           <div className="mt-6 relative ">
-            <h2 className="font-semibold mb-2">💬 Chat với Agent</h2>
+            <h2 className="font-semibold mb-2">💬 Chat with Agent</h2>
             <div className="flex space-x-2 items-center">
 <div className="relative">
 
@@ -173,7 +173,7 @@ const [showOptions, setShowOptions] = useState(false);
               <input
                 type="text"
                 className="border px-3 py-2 rounded w-full"
-                placeholder="Nhập câu hỏi hoặc hành động..."
+                placeholder="Enter a question or action..."
                 value={chatInput}
                 onChange={(e) => setChatInput(e.target.value)}
                 onKeyDown={(e) => {
@@ -188,7 +188,7 @@ const [showOptions, setShowOptions] = useState(false);
                 onClick={handleChat}
                 disabled={chatLoading}
               >
-                {chatLoading ? "Đang trả lời..." : "Gửi"}
+                {chatLoading ? "Answering..." : "Send"}
               </button>
             </div>
           </div>
